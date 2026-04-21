@@ -217,9 +217,9 @@ class TD3:
     exploration_noise: float = 0.4
     use_her: bool = False
     # TQC hyperparameters
-    n_critics: int = 2
+    n_critics: int = 5
     n_quantiles: int = 25
-    top_quantiles_to_drop_per_net: int = 2
+    top_quantiles_to_drop_per_net: int = 0  #We don't drop here
 
     def train_fn(
         self,

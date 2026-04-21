@@ -153,7 +153,7 @@ def make_td3_networks(
     preprocess_observations_fn: types.PreprocessObservationFn = types.identity_observation_preprocessor,
     hidden_layer_sizes: Sequence[int] = (256, 256),
     activation: networks.ActivationFn = linen.relu,
-    n_critics: int = 2,
+    n_critics: int = 5,
     n_quantiles: int = 25,
 ) -> TD3Networks:
     """Make TQC networks (drop-in replacement for TD3 networks)."""

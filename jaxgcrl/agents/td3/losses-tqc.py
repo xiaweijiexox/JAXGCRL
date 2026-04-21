@@ -68,9 +68,9 @@ def make_losses(
     max_action: float = 1.0,
     bc: bool = False,
     alpha: float = 2.5,
-    n_critics: int = 2,
+    n_critics: int = 5,
     n_quantiles: int = 25,
-    top_quantiles_to_drop_per_net: int = 2,
+    top_quantiles_to_drop_per_net: int = 0,
 ):
     """Creates the TQC losses."""
     policy_network = td3_network.policy_network
