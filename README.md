@@ -1,6 +1,6 @@
 # Goal-Conditioned RL with Enhanced Critics and Cross-Episode Relabeling
 
-This repository contains three innovations built on the [JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL) framework (JAX + Brax). Each variant is implemented as a set of **drop-in replacement files** for the original `crl` or `td3` agent directories. You can see the project report in project_report.pdf.
+This repository contains three innovations built on the [JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL) framework (JAX + Brax). Each variant is implemented as a set of **drop-in replacement files** for the original `crl` or `td3` agent directories. You can see the project report in project_report.pdf. It is noteworthy that the idea of CrossE doesn't refer to other articles.
 
 ## Contributions
 
@@ -33,8 +33,18 @@ this_repo/
 │   ├── losses_tqc.py          # Quantile Huber regression losses
 │   └── networks_tqc.py        # QuantileCritic network
 │
-└── shared/
-    └── networks.py             # Encoder and Actor (shared by CRL variants)
+├── shared/
+│   └── networks.py             # Encoder and Actor (shared by CRL variants)
+│
+└── experiment_result/
+    ├── ant.png
+    ├── ant_soccer.png
+    ├── ant_u_maze.png
+    ├── ant_push.png
+    ├── ant_big_maze.png
+    ├── arm_push_hard.png
+    ├── arm_binpick_easy.png
+    └── arm_reach.png
 ```
 
 ## Quick Start
@@ -71,6 +81,28 @@ bash scripts/run_tqc.sh arm_push_hard
 | Ant Push    | 0.462          | 0.490    | 0.620             |
 | Ant Big Maze| 0.189          | 0.212    | 0.234             |
 
+#### Locomotion Curves
+
+**Ant**
+
+![Ant result](experiment_result/ant.png)
+
+**Ant Soccer**
+
+![Ant Soccer result](experiment_result/ant_soccer.png)
+
+**Ant U-Maze**
+
+![Ant U-Maze result](experiment_result/ant_u_maze.png)
+
+**Ant Push**
+
+![Ant Push result](experiment_result/ant_push.png)
+
+**Ant Big Maze**
+
+![Ant Big Maze result](experiment_result/ant_big_maze.png)
+
 ### Manipulation (TD3-based)
 
 | Environment      | Baseline (TD3) | + QR Loss (TQC, drop=0) |
@@ -78,6 +110,20 @@ bash scripts/run_tqc.sh arm_push_hard
 | Arm Push Hard    | 0.010          | 0.279                   |
 | Arm Binpick Easy | 0.013          | 0.133                   |
 | Arm Reach        | 0.626          | 0.796                   |
+
+#### Manipulation Curves
+
+**Arm Push Hard**
+
+![Arm Push Hard result](experiment_result/arm_push_hard.png)
+
+**Arm Binpick Easy**
+
+![Arm Binpick Easy result](experiment_result/arm_binpick_easy.png)
+
+**Arm Reach**
+
+![Arm Reach result](experiment_result/arm_reach.png)
 
 ## Hyperparameters
 
