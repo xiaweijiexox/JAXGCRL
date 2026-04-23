@@ -85,23 +85,23 @@ bash scripts/run_tqc.sh arm_push_hard
 
 **Ant**
 
-![Ant result](experiment_result/ant.png)
+![Ant result](./experiment_result/crl_ant.png)
 
 **Ant Soccer**
 
-![Ant Soccer result](experiment_result/ant_soccer.png)
+![Ant Soccer result](./experiment_result/crl_ant_soccer.png)
 
 **Ant U-Maze**
 
-![Ant U-Maze result](experiment_result/ant_u_maze.png)
+![Ant U-Maze result](./experiment_result/crl_ant_umaze.png)
 
 **Ant Push**
 
-![Ant Push result](experiment_result/ant_push.png)
+![Ant Push result](./experiment_result/crl_ant_push.png)
 
 **Ant Big Maze**
 
-![Ant Big Maze result](experiment_result/ant_big_maze.png)
+![Ant Big Maze result](./experiment_result/crl_ant_big_maze.png)
 
 ### Manipulation (TD3-based)
 
@@ -115,15 +115,15 @@ bash scripts/run_tqc.sh arm_push_hard
 
 **Arm Push Hard**
 
-![Arm Push Hard result](experiment_result/arm_push_hard.png)
+![Arm Push Hard result](./experiment_result/td3_arm_push_hard.png)
 
 **Arm Binpick Easy**
 
-![Arm Binpick Easy result](experiment_result/arm_binpick_easy.png)
+![Arm Binpick Easy result](./experiment_result/td3_binpick_easy.png)
 
 **Arm Reach**
 
-![Arm Reach result](experiment_result/arm_reach.png)
+![Arm Reach result](./experiment_result/td3_arm_reach.png)
 
 ## Hyperparameters
 
