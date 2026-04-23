@@ -99,6 +99,14 @@ bash scripts/run_tqc.sh arm_push_hard
 | Quantiles to drop | 0 |
 | Huber threshold κ | 1.0 |
 
+
+# Conclusion
+In this work, we improved CRL for locomotion and TD3 for manipulation. For locomotion, Twin-Q provided a more stable value-learning signal, while Cross-Episode HER further improved performance in environments with stronger structural constraints. For manipulation, replacing the scalar TD3 critic with a quantile-regression-based critic produced consistent gains across all evaluated tasks. Overall, the results show that the proposed modifications improve both training stability and final task performance. The idea of Cross-Episode was inspired by \textit{Teamfight Tactics}: when the opening draw does not support the originally planned trait, players often sell units to a better-supported composition. At this moment, player need to align the current state with the most likely future trajectory with  highest rewards. Similarly, Cross-Episode allows a transition to reuse future supervision from a nearby compatible transition. If one path seems unfeasible, one will choose future trajectory of another state that is the closest in distance. Without practicing this technique, you will keep losing when you are not fortunate enough, so it is essential to train the transition process.
+
+We also explored many unsuccessful variants, including BCE-style CRL losses, stronger direct goal supervision in CRL, learnable or distance-based transition probabilities, TQC-style designs inside CRL's twin Q, original TQC with quantile dropping, and QR loss combined with Distributional NCE. These negative results were also valuable, because they helped identify the constraint of the contrastive learning and manipulation task. 
+
+
+
 ## References
 
 - Eysenbach et al., "Contrastive Learning as Goal-Conditioned Reinforcement Learning," NeurIPS 2022.
