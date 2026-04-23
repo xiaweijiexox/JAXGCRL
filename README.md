@@ -1,6 +1,6 @@
 # Goal-Conditioned RL with Enhanced Critics and Cross-Episode Relabeling
 
-This repository contains three innovations built on the [JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL) framework (JAX + Brax). Each variant is implemented as a set of **drop-in replacement files** for the original `crl` or `td3` agent directories.
+This repository contains three innovations built on the [JaxGCRL](https://github.com/MichalBortkiewicz/JaxGCRL) framework (JAX + Brax). Each variant is implemented as a set of **drop-in replacement files** for the original `crl` or `td3` agent directories. You can see the project report in project_report.pdf.
 
 ## Contributions
 
